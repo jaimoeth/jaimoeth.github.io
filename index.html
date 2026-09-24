@@ -140,6 +140,7 @@
     .contact-card p { font-size: 0.8rem; color: #777; margin-bottom: 8px; }
     .contact-card a { font-size: 0.85rem; color: #0066cc; text-decoration: none; word-break: break-all; }
     .contact-card a:hover { text-decoration: underline; }
+    .card-logo { height: 16px; margin-bottom: 6px; display: block; }
 
     /* 页脚：注意事项 */
     footer {
@@ -168,156 +169,110 @@
 
   <!-- 个人头像 + 名字 + 简介 -->
   <div class="header-profile">
-    <img src="avatar.png" alt="JaiMo Avatar" class="avatar" />
+    <img id="profile-avatar" src="" alt="Avatar" class="avatar" />
     <div class="profile-info">
-      <h1>JaiMo</h1>
-      <p>Building from first principles. Exploring quantitative systems.</p>
+      <h1 id="profile-name"></h1>
+      <p id="profile-bio"></p>
     </div>
   </div>
 
   <!-- 三栏核心布局 -->
   <div class="main-container">
 
-    <!-- 左侧：Database 数据库分类 -->
+    <!-- 左侧栏 -->
     <aside class="sidebar-left">
-      <div class="column-title">🪴 Database</div>
-      
-      <!-- Data Analysis 分类 -->
-      <div class="db-group">
-        <span class="db-title">📊 Data Analysis</span>
-        <ul class="db-list">
-          <li><a href="DataAnalysis/StockPriceSimulation.html" target="_blank">· Stock Price Simulation</a></li>
-        </ul>
-      </div>
-
-      <!-- Python Tutorials 分类 -->
-      <div class="db-group">
-        <span class="db-title">🐍 Python Tutorials</span>
-        <ul class="db-list">
-          <li><a href="PythonTutorials/0LaTeXNotes.html" target="_blank">· LaTeX Notes</a></li>
-          <li><a href="PythonTutorials/1PythonEnglish.html" target="_blank">· Python - English</a></li>
-          <li><a href="PythonTutorials/1PythonChinese.html" target="_blank">· Python - Chinese</a></li>
-        </ul>
-      </div>
-
-      <!-- Open-source Research 分类 -->
-      <div class="db-group">
-        <span class="db-title">🔬 Open-source Research</span>
-        <ul class="db-list">
-          <!-- <li><span style="color:#aaa; font-size:0.85rem;">No public projects available.</span></li> -->
-          <!-- <li><a href="index.html">· Official Website</a></li> -->
-          <li><a href="https://github.com/jaimoeth/jaimoeth/tree/main/OSResearch/OfficialWebsite" target="_blank">· Official Website</a></li>
-        </ul>
-      </div>
+      <div class="column-title" id="title-left"></div>
+      <div id="left-column-content"></div>
     </aside>
 
-    <!-- 中间：Latest Articles 时间流 (最新在上，最早在下) -->
+    <!-- 中间栏 -->
     <main class="content-center">
-      <div class="column-title">🪵 Latest Articles</div>
-
-      <!-- 1. 最新：Official Website -->
-      <div class="article-card">
-        <span class="article-tag">Open-source Research</span>
-        <h3><a href="https://github.com/jaimoeth/jaimoeth/tree/main/OSResearch/OfficialWebsite" target="_blank">Official Website</a></h3>
-        <div class="article-date">2026/09/22</div>
-        <p class="article-desc">An open-source template for Web3 static blogs and personal knowledge bases, showcasing decentralized web practices that combine IPFS hosting with ENS domain binding.</p>
-      </div>
-
-      <!-- 2. 次新：Stock Price Simulation -->
-      <div class="article-card">
-        <span class="article-tag">Data Analysis</span>
-        <h3><a href="DataAnalysis/StockPriceSimulation.html" target="_blank">Stock Price Simulation</a></h3>
-        <div class="article-date">2026/09/20</div>
-        <p class="article-desc">From fundamental assumptions to the derivation of Stochastic Differential Equations (SDEs): The complete process of mathematical modeling and quantitative simulation for stock price generation functions.</p>
-      </div>
-
-      <!-- 3. 第三：LaTeX Notes -->
-      <div class="article-card">
-        <span class="article-tag">Python Tutorials</span>
-        <h3><a href="PythonTutorials/0LaTeXNotes.html" target="_blank">LaTeX Notes</a></h3>
-        <div class="article-date">2026/09/18</div>
-        <p class="article-desc">A quick-reference guide to common LaTeX syntax and mathematical formula code, designed as a handy index for efficient typesetting and formula entry.</p>
-      </div>
-
-      <!-- 4. 第四：Python - English -->
-      <div class="article-card">
-        <span class="article-tag">Python Tutorials</span>
-        <h3><a href="PythonTutorials/1PythonEnglish.html" target="_blank">Python - English</a></h3>
-        <div class="article-date">2026/09/15</div>
-        <p class="article-desc">Interactive guide covering core Python syntax, data structures, and functions for beginners.</p>
-      </div>
-
-      <!-- 5. 最早：Python - Chinese -->
-      <div class="article-card">
-        <span class="article-tag">Python Tutorials</span>
-        <h3><a href="PythonTutorials/1PythonChinese.html" target="_blank">Python - Chinese</a></h3>
-        <div class="article-date">2026/09/10</div>
-        <p class="article-desc">Python 核心语法与基础操作速查指南，包含变量、数据结构与函数的交互式实例演示。</p>
-      </div>
-
-      <!-- 在中间栏第 5 张卡片下方加入极简引导 -->
-      <div style="text-align: center; margin-top: 20px; font-size: 0.85rem; color: #888;">
-        <span>Showing 5 latest updates. Explore all topics in the <strong>Database</strong> on the left.</span>
-      </div>
-
+      <div class="column-title" id="title-center"></div>
+      <div id="center-column-content"></div>
+      <div style="text-align: center; margin-top: 20px; font-size: 0.85rem; color: #888;" id="center-column-footer"></div>
     </main>
 
-    <!-- 右侧：Connection 官方联系方式 -->
+    <!-- 右侧栏 -->
     <aside class="sidebar-right">
-      <div class="column-title">📫 Connection</div>
-
-      <!-- BlueSky -->
-      <div class="contact-card">
-        <img src="https://img.shields.io/badge/-0085ff?style=flat-square&logo=bluesky&logoColor=white" alt="Bluesky Icon" class="card-logo">
-        <h4>BlueSky</h4>
-        <p>JaiMo (@jaimo.eth.limo)</p>
-        <a href="https://bsky.app/profile/jaimo.eth.limo" target="_blank">bsky.app/profile/jaimo.eth.limo</a>
-      </div>
-
-      <!-- X (Twitter) -->
-      <div class="contact-card">
-        <img src="https://img.shields.io/badge/-000000?style=flat-square&logo=x&logoColor=white" alt="X Icon" class="card-logo">
-        <h4>X (Twitter)</h4>
-        <p>JaiMo (@jaimoeth)</p>
-        <a href="https://x.com/jaimoeth" target="_blank">x.com/jaimoeth</a>
-      </div>
-
-      <!-- GitHub -->
-      <div class="contact-card">
-        <img src="https://img.shields.io/badge/-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub Icon" class="card-logo">
-        <h4>GitHub</h4>
-        <p>JaiMo ( jaimoeth)</p>
-        <a href="https://github.com/jaimoeth" target="_blank">github.com/jaimoeth</a>
-      </div>
-
-      <!-- Gmail -->
-      <div class="contact-card">
-        <img src="https://img.shields.io/badge/-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Gmail Icon" class="card-logo">        <h4>Gmail</h4>
-        <p>Direct Contact</p>
-        <a href="mailto:jaimoeth@gmail.com">jaimoeth@gmail.com</a>
-      </div>
-
-      <!-- 在右侧栏目下方插入版本号 -->
-      <div style="text-align: center; margin-top: 20px; font-size: 0.85rem; color: #888;">
-        <span>JaiMo Version 1.0</span>
-      </div>
-
+      <div class="column-title" id="title-right"></div>
+      <div id="right-column-content"></div>
+      <div style="text-align: center; margin-top: 20px; font-size: 0.85rem; color: #888;" id="profile-version"></div>
     </aside>
 
   </div>
 
   <!-- 最下方：注意事项 & 官方验证渠道 -->
-  <footer>
-    
-    <h4>⚠️ Important Notices & Official Verification Channels</h4>
-    <p style="margin-top: 8px;"><strong>防伪声明</strong>：请认准本 ENS 域名 <code>jaimo.eth</code> 绑定的官方联系渠道。所有涉及资金、项目合作与私信通知，均以 <a href="https://jaimo.eth.xyz" target="_blank">https://jaimo.eth.xyz</a>（ENS 解析验证页面）公示的信息为准。</p>
-    <p style="margin-top: 8px;"><strong>Anti-Fraud Statement</strong>: Please verify all official contact channels bound to the ENS domain <code>jaimo.eth</code>. All matters regarding funds, project collaborations, and direct messages are subject to the information published on <a href="https://jaimo.eth.xyz" target="_blank">https://jaimo.eth.xyz</a> (ENS Resolution Page).</p>
-    <p style="margin-bottom: 12px; font-size: 0.9rem; color: #666; margin-top: 8px;">
-      <strong>Origin of jaimo</strong>: Coined directly from the precise pronunciation (jai-mo) of <strong>"Jianmu" (建木)</strong>—the cosmic world tree in Chinese mythology—serving as a unified digital identity across all platforms.
-    </p>
-    <p style="margin-top: 8px;"><strong>Support Us</strong>: USDC for <code>jaimo.eth</code> | EVM-compatible networks</p>
-    
-  </footer>
+  <footer id="site-footer"></footer>
 
+  <!-- 引入配置文件 -->
+  <script src="config.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (!window.SITE_CONFIG) return;
+
+      const cfg = window.SITE_CONFIG;
+
+      // 1. 头部资料加载
+      document.title = cfg.profile.title;
+      document.getElementById("profile-avatar").src = cfg.profile.avatar;
+      document.getElementById("profile-name").textContent = cfg.profile.name;
+      document.getElementById("profile-bio").textContent = cfg.profile.bio;
+      document.getElementById("profile-version").innerHTML = `<span>${cfg.profile.version}</span>`;
+      
+      // 2. 三栏总标题加载
+      document.getElementById("title-left").innerHTML = cfg.titles.leftColumn;
+      document.getElementById("title-center").innerHTML = cfg.titles.centerColumn;
+      document.getElementById("title-right").innerHTML = cfg.titles.rightColumn;
+
+      // 3. 左栏渲染
+      const leftContainer = document.getElementById("left-column-content");
+      leftContainer.innerHTML = cfg.leftColumn.map(group => `
+        <div class="db-group">
+          <span class="db-title">${group.category}</span>
+          <ul class="db-list">
+            ${group.items.map(item => `<li><a href="${item.url}" target="_blank">· ${item.name}</a></li>`).join('')}
+          </ul>
+        </div>
+      `).join('');
+
+      // 4. 中栏渲染
+      const centerContainer = document.getElementById("center-column-content");
+      centerContainer.innerHTML = cfg.centerColumn.map(art => `
+        <div class="article-card">
+          <span class="article-tag">${art.tag}</span>
+          <h3><a href="${art.url}" target="_blank">${art.title}</a></h3>
+          <div class="article-date">${art.date}</div>
+          <p class="article-desc">${art.desc}</p>
+        </div>
+      `).join('');
+      
+      // 动态替换中栏底部提示中的左栏标题占位符
+      let footerText = cfg.centerColumnFooter.replace("{leftColumnTitle}", cfg.titles.leftColumn);
+      document.getElementById("center-column-footer").innerHTML = `<span>${footerText}</span>`;
+
+      // 5. 右栏渲染
+      const rightContainer = document.getElementById("right-column-content");
+      rightContainer.innerHTML = cfg.rightColumn.map(conn => `
+        <div class="contact-card">
+          <img src="${conn.badge}" alt="${conn.alt}" class="card-logo">
+          <h4>${conn.name}</h4>
+          <p>${conn.id}</p>
+          <a href="${conn.url}" target="_blank">${conn.url.replace(/^https?:\/\//, '')}</a>
+        </div>
+      `).join('');
+
+      // 6. 页脚渲染
+      const f = cfg.footer;
+      const renderNotice = (template) => template.replaceAll("{ens}", f.ens).replaceAll("{verifyUrl}", f.verifyUrl);
+      
+      document.getElementById("site-footer").innerHTML = `
+        <h4>${f.title}</h4>
+        <p style="margin-top: 8px;">${renderNotice(f.noticeCn)}</p>
+        <p style="margin-top: 8px;">${renderNotice(f.noticeEn)}</p>
+        <p style="margin-bottom: 12px; font-size: 0.9rem; color: #666; margin-top: 8px;"><strong>Origin of jaimo</strong>: ${f.originText}</p>
+        <p style="margin-top: 8px;"><strong>Support Us</strong>: ${f.supportText}</p>
+      `;
+    });
+  </script>
 </body>
 </html>
