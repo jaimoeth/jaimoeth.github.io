@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JaiMo | Personal Homepage</title>
 
   <!-- 🌟 设置浏览器标签页图标 (Favicon) -->
-  <link rel="icon" type="image/png" href="avatar.png">
-  <link rel="apple-touch-icon" href="avatar.png">
+  <!-- 🌟 Set browser tab icon (Favicon) -->
+  <link id="favicon-png" rel="icon" type="image/png" href="">
+  <link id="favicon-apple" rel="apple-touch-icon" href="">
 
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #fbfbfb; color: #2f2f2f; line-height: 1.6; }
 
     /* 顶部 Banner 区域 */
+    /* Top Banner Area */
     .banner-container {
       position: relative;
       width: 100%;
@@ -22,6 +24,7 @@
     }
 
     /* 头部个人信息栏 */
+    /* Header Personal Information Section */
     .header-profile {
       max-width: 1140px;
       margin: 0 auto;
@@ -30,6 +33,7 @@
     }
 
     /* 头像：跨越 Banner 和下方内容区域 */
+    /* Avatar: Spanning the banner and the content area below */
     .avatar {
       width: 110px;
       height: 110px;
@@ -44,6 +48,7 @@
     }
 
     /* 名字与简介区域 */
+    /* Name and Introduction Section */
     .profile-info {
       padding-top: 65px;
       padding-bottom: 25px;
@@ -64,6 +69,7 @@
     }
 
     /* 三栏主体容器 */
+    /* Three-column main container */
     .main-container {
       display: flex;
       max-width: 1140px;
@@ -73,10 +79,11 @@
     }
 
     /* 通用栏目标题 */
+    /* General Section Title */
     .column-title {
       font-size: 1.25rem;
       font-weight: 600;
-      color: #2e7d32; /* 淡绿色 */
+      color: #2e7d32; /* 淡绿色 */ /* Light green */
       margin-bottom: 16px;
       display: flex;
       align-items: center;
@@ -84,6 +91,7 @@
     }
 
     /* 左栏：Database */
+    /* Left column: Database */
     .sidebar-left { flex: 1; min-width: 220px; }
     .db-group { margin-bottom: 15px; }
     .db-title { font-weight: 600; color: #333; margin-bottom: 6px; display: block; font-size: 0.95rem; }
@@ -93,6 +101,7 @@
     .db-list a:hover { color: #2e7d32; text-decoration: underline; }
 
     /* 中栏：Latest Articles */
+    /* Middle Column: Latest Articles */
     .content-center { flex: 2; min-width: 320px; }
     .article-card {
       background: #ffffff;
@@ -128,6 +137,7 @@
     .article-date { font-size: 0.8rem; color: #888; }
 
     /* 右栏：Connection */
+    /* Right Column: Connection */
     .sidebar-right { flex: 1; min-width: 220px; }
     .contact-card {
       background: #ffffff;
@@ -143,6 +153,7 @@
     .card-logo { height: 16px; margin-bottom: 6px; display: block; }
 
     /* 页脚：注意事项 */
+    /* Footer: Notes */
     footer {
       max-width: 1140px;
       margin: 40px auto 30px;
@@ -154,6 +165,7 @@
     footer h4 { color: #333; margin-bottom: 6px; font-size: 0.95rem; }
 
     /* 移动端适应 */
+    /* Mobile adaptation */
     @media (max-width: 768px) {
       .main-container { flex-direction: column; }
       .avatar { left: 50%; transform: translateX(-50%); }
@@ -165,9 +177,11 @@
 <body>
 
   <!-- 最上方背景图 -->
+  <!-- Top background image -->
   <div class="banner-container"></div>
 
   <!-- 个人头像 + 名字 + 简介 -->
+  <!-- Profile picture + Name + Bio -->
   <div class="header-profile">
     <img id="profile-avatar" src="" alt="Avatar" class="avatar" />
     <div class="profile-info">
@@ -177,15 +191,18 @@
   </div>
 
   <!-- 三栏核心布局 -->
+  <!-- Three-column core layout -->
   <div class="main-container">
 
     <!-- 左侧栏 -->
+    <!-- Left Sidebar -->
     <aside class="sidebar-left">
       <div class="column-title" id="title-left"></div>
       <div id="left-column-content"></div>
     </aside>
 
     <!-- 中间栏 -->
+    <!-- Middle column -->
     <main class="content-center">
       <div class="column-title" id="title-center"></div>
       <div id="center-column-content"></div>
@@ -193,6 +210,7 @@
     </main>
 
     <!-- 右侧栏 -->
+    <!-- Right sidebar -->
     <aside class="sidebar-right">
       <div class="column-title" id="title-right"></div>
       <div id="right-column-content"></div>
@@ -202,9 +220,11 @@
   </div>
 
   <!-- 最下方：注意事项 & 官方验证渠道 -->
+  <!-- Bottom section: Important Notes & Official Verification Channels -->
   <footer id="site-footer"></footer>
 
   <!-- 引入配置文件 -->
+  <!-- Import configuration file -->
   <script src="config.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -213,18 +233,23 @@
       const cfg = window.SITE_CONFIG;
 
       // 1. 头部资料加载
+      // 1. Load header data
       document.title = cfg.profile.title;
       document.getElementById("profile-avatar").src = cfg.profile.avatar;
       document.getElementById("profile-name").textContent = cfg.profile.name;
       document.getElementById("profile-bio").textContent = cfg.profile.bio;
       document.getElementById("profile-version").innerHTML = `<span>${cfg.profile.version}</span>`;
+      document.getElementById("favicon-png").href = cfg.profile.avatar;
+      document.getElementById("favicon-apple").href = cfg.profile.avatar;
       
       // 2. 三栏总标题加载
+      // 2. Load three-column main title
       document.getElementById("title-left").innerHTML = cfg.titles.leftColumn;
       document.getElementById("title-center").innerHTML = cfg.titles.centerColumn;
       document.getElementById("title-right").innerHTML = cfg.titles.rightColumn;
 
       // 3. 左栏渲染
+      // 3. Left column rendering
       const leftContainer = document.getElementById("left-column-content");
       leftContainer.innerHTML = cfg.leftColumn.map(group => `
         <div class="db-group">
@@ -236,6 +261,7 @@
       `).join('');
 
       // 4. 中栏渲染
+      // 4. Middle column rendering
       const centerContainer = document.getElementById("center-column-content");
       centerContainer.innerHTML = cfg.centerColumn.map(art => `
         <div class="article-card">
@@ -247,10 +273,12 @@
       `).join('');
       
       // 动态替换中栏底部提示中的左栏标题占位符
+      // Dynamically replace the left-column title placeholder in the bottom prompt of the middle column.
       let footerText = cfg.centerColumnFooter.replace("{leftColumnTitle}", cfg.titles.leftColumn);
       document.getElementById("center-column-footer").innerHTML = `<span>${footerText}</span>`;
 
       // 5. 右栏渲染
+      // 5. Right column rendering
       const rightContainer = document.getElementById("right-column-content");
       rightContainer.innerHTML = cfg.rightColumn.map(conn => `
         <div class="contact-card">
@@ -261,17 +289,30 @@
         </div>
       `).join('');
 
-      // 6. 页脚渲染
+      // 6. 页脚渲染（仅保留 title，动态支持可选的 vars 模板替换）
+      // 6. Footer rendering (retains only the title; supports dynamic template variable replacement)
       const f = cfg.footer;
-      const renderNotice = (template) => template.replaceAll("{ens}", f.ens).replaceAll("{verifyUrl}", f.verifyUrl);
-      
+      const renderText = (text) => {
+        if (!f.vars) return text;
+        let result = text;
+        for (const key in f.vars) {
+          result = result.replaceAll(`{${key}}`, f.vars[key]);
+        }
+        return result;
+      };
+      const footerItemsHtml = f.items.map(item => {
+        let val = renderText(item.value);
+        if (item.type === "text") {
+          return `<p style="margin-top: 8px;"><strong>${renderText(item.prefix)}</strong>: ${val}</p>`;
+        } else {
+          return `<p style="margin-top: 8px;">${val}</p>`;
+        }
+      }).join('');
       document.getElementById("site-footer").innerHTML = `
         <h4>${f.title}</h4>
-        <p style="margin-top: 8px;">${renderNotice(f.noticeCn)}</p>
-        <p style="margin-top: 8px;">${renderNotice(f.noticeEn)}</p>
-        <p style="margin-bottom: 12px; font-size: 0.9rem; color: #666; margin-top: 8px;"><strong>Origin of jaimo</strong>: ${f.originText}</p>
-        <p style="margin-top: 8px;"><strong>Support Us</strong>: ${f.supportText}</p>
+        ${footerItemsHtml}
       `;
+
     });
   </script>
 </body>
