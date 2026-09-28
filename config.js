@@ -15,7 +15,7 @@ window.SITE_CONFIG = {
     avatar: "avatar.png",
     banner: "background.jpg",
     bio: "Building from first principles. Exploring quantitative systems.",
-    version: "Version 1.0.0"
+    version: "Version 1.1.2"
   },
 
   titles: {
@@ -33,20 +33,21 @@ window.SITE_CONFIG = {
 
     { category: "📊 Data Analysis",
       items: [
-        { name: "Stock Price Simulation", url: "https://github.com/jaimoeth/jaimoeth/tree/main/DataAnalysis/StockPriceSimulation/SPSMath.ipynb" }
+        { name: "Stock Price Simulation", url: "https://github.com/jaimoeth/stock-lab/tree/main/SPSMath.ipynb" }
       ]
     },
     { category: "🐍 Python Tutorials",
       items: [
-        { name: "LaTeX Notes", url: "https://github.com/jaimoeth/jaimoeth/tree/main/PythonTutorials/0LaTeXNotes.ipynb" },
-        { name: "Python - English", url: "https://github.com/jaimoeth/jaimoeth/tree/main/PythonTutorials/1PythonEnglish.ipynb" },
-        { name: "Python - Chinese", url: "https://github.com/jaimoeth/jaimoeth/tree/main/PythonTutorials/1PythonChinese.ipynb" },
-        { name: "Numpy - Chinese", url: "https://github.com/jaimoeth/jaimoeth/tree/main/PythonTutorials/2NumpyChinese.ipynb" }
+        { name: "LaTeX Notes", url: "https://github.com/jaimoeth/python-tutorials/tree/main/0LaTeXNotes.ipynb" },
+        { name: "Python - English", url: "https://github.com/jaimoeth/python-tutorials/tree/main/1PythonEnglish.ipynb" },
+        { name: "Python - Chinese", url: "https://github.com/jaimoeth/python-tutorials/tree/main/1PythonChinese.ipynb" },
+        { name: "Numpy - Chinese", url: "https://github.com/jaimoeth/python-tutorials/tree/main/2NumpyChinese.ipynb" }
       ]
     },
     { category: "🔬 Open-source Research",
       items: [
         { name: "IP Website", url: "https://github.com/JaiMoDAO/ip-web" },
+        { name: "ApeWorX Lab", url: "https://github.com/JaiMoDAO/test-ApeWorX" },
         { name: "Self Bank", url: "https://github.com/JaiMoDAO/self-bank" }
       ]
     }
@@ -59,6 +60,12 @@ window.SITE_CONFIG = {
     // Items within {} can be added or removed freely; just ensure the formatting is consistent;
     // Do not forget the commas at the end of intermediate lines;
 
+    { tag: "Open-source Research",
+      title: "ApeWorX Lab",
+      url: "https://github.com/JaiMoDAO/test-ApeWorX",
+      date: "2026/09/28",
+      desc: "ApeWorX local mainnet fork testing environment for interacting with real DeFi protocols and integration testing."
+    },
     { tag: "Open-source Research",
       title: "Self Bank",
       url: "https://github.com/JaiMoDAO/self-bank",
@@ -82,12 +89,6 @@ window.SITE_CONFIG = {
       url: "https://github.com/jaimoeth/jaimoeth/tree/main/DataAnalysis/StockPriceSimulation/SPSMath.ipynb",
       date: "2026/09/20",
       desc: "From fundamental assumptions to the derivation of Stochastic Differential Equations (SDEs): The complete process of mathematical modeling and quantitative simulation for stock price generation functions."
-    },
-    { tag: "Python Tutorials",
-      title: "LaTeX Notes",
-      url: "https://github.com/jaimoeth/jaimoeth/tree/main/PythonTutorials/0LaTeXNotes.ipynb",
-      date: "2026/09/18",
-      desc: "A quick-reference guide to common LaTeX syntax and mathematical formula code, designed as a handy index for efficient typesetting and formula entry."
     }
   ],
   
