@@ -33,7 +33,7 @@ window.SITE_CONFIG = {
 
     { category: "📊 Data Analysis",
       items: [
-        { name: "Stock Price Simulation", url: "https://github.com/jaimoeth/stock-lab/tree/main/SPSMath.ipynb" }
+        { name: "Stock Lab", url: "https://github.com/jaimoeth/stock-lab/tree/main/SPSMath.ipynb" }
       ]
     },
     { category: "🐍 Python Tutorials",
@@ -80,13 +80,13 @@ window.SITE_CONFIG = {
     },
     { tag: "Python Tutorials",
       title: "Numpy - Chinese",
-      url: "https://github.com/jaimoeth/jaimoeth/tree/main/PythonTutorials/2NumpyChinese.ipynb",
+      url: "https://github.com/jaimoeth/python-tutorials/tree/main/2NumpyChinese.ipynb",
       date: "2026/09/21",
       desc: "Interactive guide covering core Python syntax, data structures, and functions for beginners."
     },
     { tag: "Data Analysis",
-      title: "Stock Price Simulation",
-      url: "https://github.com/jaimoeth/jaimoeth/tree/main/DataAnalysis/StockPriceSimulation/SPSMath.ipynb",
+      title: "Stock Lab",
+      url: "https://github.com/jaimoeth/stock-lab/tree/main/SPSMath.ipynb",
       date: "2026/09/20",
       desc: "From fundamental assumptions to the derivation of Stochastic Differential Equations (SDEs): The complete process of mathematical modeling and quantitative simulation for stock price generation functions."
     }
