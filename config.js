@@ -121,9 +121,9 @@ window.SITE_CONFIG = {
       badge: "https://img.shields.io/badge/-181717?style=flat-square&logo=github&logoColor=white",
       alt: "GitHub Icon"
     },
-    { name: "JaiMoDAO",
+    { name: "JaiMoLabs",
       id: "GitHub Organization",
-      url: "https://github.com/JaiMoDAO",
+      url: "https://github.com/JaiMoLabs",
       badge: "avatar.png",
       alt: "GitHub Icon"
     },
@@ -169,7 +169,7 @@ window.SITE_CONFIG = {
       },
       { type: "text",
         prefix: "Support Us",
-        value: "USDC for jaimo.eth | EVM-compatible networks"
+        value: "ETH for jaimo.eth | Ethereum Mainnet"
       }
     ]
   }
