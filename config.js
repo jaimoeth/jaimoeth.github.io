@@ -38,17 +38,13 @@ window.SITE_CONFIG = {
     },
     { category: "🐍 Python Tutorials",
       items: [
-        { name: "LaTeX Notes", url: "https://github.com/jaimoeth/python-tutorials/tree/main/0LaTeXNotes.ipynb" },
-        { name: "Python - English", url: "https://github.com/jaimoeth/python-tutorials/tree/main/1PythonEnglish.ipynb" },
-        { name: "Python - Chinese", url: "https://github.com/jaimoeth/python-tutorials/tree/main/1PythonChinese.ipynb" },
-        { name: "Numpy - Chinese", url: "https://github.com/jaimoeth/python-tutorials/tree/main/2NumpyChinese.ipynb" }
+        { name: "Python Basics - Chinese", url: "https://github.com/jaimoeth/python-tutorials/tree/main/01_python_basics.ipynb" }
       ]
     },
     { category: "🔬 Open-source Research",
       items: [
-        { name: "IP Website", url: "https://github.com/JaiMoDAO/ip-web" },
-        { name: "ApeWorX Lab", url: "https://github.com/JaiMoDAO/test-ApeWorX" },
-        { name: "Self Bank", url: "https://github.com/JaiMoDAO/self-bank" }
+        { name: "IP Website", url: "https://github.com/JaiMoLabs/ip-web" },
+        { name: "ApeWorX Lab", url: "https://github.com/JaiMoLabs/ApeWorX-lab" }
       ]
     }
   ],
@@ -62,33 +58,27 @@ window.SITE_CONFIG = {
 
     { tag: "Open-source Research",
       title: "ApeWorX Lab",
-      url: "https://github.com/JaiMoDAO/test-ApeWorX",
+      url: "https://github.com/JaiMoLabs/ApeWorX-lab",
       date: "2026/09/28",
       desc: "ApeWorX local mainnet fork testing environment for interacting with real DeFi protocols and integration testing."
     },
     { tag: "Open-source Research",
-      title: "Self Bank",
-      url: "https://github.com/JaiMoDAO/self-bank",
-      date: "2026/09/25",
-      desc: "A Web3 sovereign banking protocol powered by ERC-4337, featuring gold-backed token accounting, on-chain invoicing, and zero-friction payroll."
-    },
-    { tag: "Open-source Research",
       title: "IP Website",
-      url: "https://github.com/JaiMoDAO/ip-web",
+      url: "https://github.com/JaiMoLabs/ip-web",
       date: "2026/09/22",
       desc: "An open-source template for Web3 static blogs and personal knowledge bases, showcasing decentralized web practices that combine IPFS hosting with ENS domain binding."
-    },
-    { tag: "Python Tutorials",
-      title: "Numpy - Chinese",
-      url: "https://github.com/jaimoeth/python-tutorials/tree/main/2NumpyChinese.ipynb",
-      date: "2026/09/21",
-      desc: "Interactive guide covering core Python syntax, data structures, and functions for beginners."
     },
     { tag: "Data Analysis",
       title: "Stock Lab",
       url: "https://github.com/jaimoeth/stock-lab/tree/main/SPSMath.ipynb",
       date: "2026/09/20",
       desc: "From fundamental assumptions to the derivation of Stochastic Differential Equations (SDEs): The complete process of mathematical modeling and quantitative simulation for stock price generation functions."
+    },
+    { tag: "Python Tutorials",
+      title: "Python Basics - Chinese",
+      url: "https://github.com/jaimoeth/python-tutorials/tree/main/01_python_basics.ipynb",
+      date: "2026/09/29",
+      desc: "These open-source study notes are compiled based on MIT 6.0001, Introduction to Computer Science and Programming in Python, taught by Dr. Ana Bell, Prof. Eric Grimson, and Prof. John Guttag.This note is shared under the CC-BY-NC-SA license."
     }
   ],
   
