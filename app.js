@@ -122,10 +122,12 @@ document.addEventListener("DOMContentLoaded", () => {
                             </div>
                             <div class="pl-6 space-y-1.5 border-l border-gray-100 ml-2">
                                 ${cat.articles.map(art => `
-                                    <!-- 修改 1：将 href 改为 art.url，并加上 target="_blank" 在新标签页打开 -->
-                                    <a href="${art.url || '#'}" target="_blank" rel="noopener noreferrer" class="block text-sm text-gray-600 hover:text-green-700 transition-colors py-0.5">
-                                        · ${art.title}
-                                    </a>
+                                    <!-- 修改：用普通 div 或保持行内，只让具体的标题文字带有跳转链接和悬停效果 -->
+                                    <div class="py-0.5">
+                                        <a href="${art.url || '#'}" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-600 hover:text-green-700 transition-colors inline-block">
+                                            · ${art.title}
+                                        </a>
+                                    </div>
                                 `).join('')}
                             </div>
                         </div>
@@ -142,18 +144,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 <div class="space-y-6">
                     ${latestArticles.map(art => `
-                        <!-- 修改 2：让右侧文章卡片变成可点击跳转的链接标签 <a> -->
-                        <a href="${art.url || '#'}" target="_blank" rel="noopener noreferrer" class="block bg-white border border-gray-200/80 rounded-xl p-6 shadow-xs hover:shadow-md transition-shadow group">
+                        <!-- 卡片本身恢复为普通的静态 div 容器，不再是 a 标签，避免误触 -->
+                        <div class="bg-white border border-gray-200/80 rounded-xl p-6 shadow-xs">
                             <div class="inline-block px-3 py-1 bg-green-50 text-green-700 text-xs font-semibold rounded-md mb-3">
                                 ${art.tag}
                             </div>
-                            <!-- 修改 3：标题加上 group-hover 变色效果，提升交互质感 -->
-                            <h3 class="text-xl font-bold text-gray-900 mb-1 group-hover:text-green-700 transition-colors">
-                                ${art.title}
+                            <!-- 只有标题部分包裹 a 标签，点击标题才跳转外部网址 -->
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">
+                                <a href="${art.url || '#'}" target="_blank" rel="noopener noreferrer" class="hover:text-green-700 transition-colors">
+                                    ${art.title}
+                                </a>
                             </h3>
                             <div class="text-xs text-gray-400 mb-3">${art.date}</div>
                             <p class="text-gray-600 text-sm leading-relaxed">${art.summary}</p>
-                        </a>
+                        </div>
                     `).join('')}
                 </div>
 
