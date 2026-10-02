@@ -218,7 +218,7 @@ function renderContactSection(socialLinks) {
                 </div>
                 <div class="mt-6 flex gap-2">
                     <input type="email" placeholder="Enter Email" class="bg-[#f4f7f4] border border-[#d8e2dc] text-xs rounded-xl px-3 py-2.5 w-full focus:outline-none focus:border-[#588157]">
-                    <button onclick="alert('订阅成功！感谢您的关注。')" class="bg-[#588157] text-white text-xs font-semibold px-4 py-2.5 rounded-xl hover:bg-[#3a5a40] transition cursor-pointer shrink-0">
+                    <button onclick="alert('Subscription successful!')" class="bg-[#588157] text-white text-xs font-semibold px-4 py-2.5 rounded-xl hover:bg-[#3a5a40] transition cursor-pointer shrink-0">
                         Submit
                     </button>
                 </div>

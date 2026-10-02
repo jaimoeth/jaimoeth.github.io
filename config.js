@@ -11,9 +11,8 @@ window.SITE_CONFIG = {
 
     // 顶部下拉目录
     topicsMenu: [
-        { name: "关于我 (About)", link: "#about-section" },
-        { name: "精选文章 (Articles)", link: "#articles-section" },
-        { name: "联系与支持 (Contact)", link: "#contact-section" }
+        { name: "Token Price Simulation", link: "https://github.com/jaimoeth/topics/token-price-simulation" },
+        { name: "Contact us", link: "#contact-section" }
     ],
 
     // 全宽 Hero 头图区域new
@@ -29,51 +28,51 @@ window.SITE_CONFIG = {
         title: "Database",
         categories: [
             {
-                name: "Data Analysis",
+                name: "Topics",
                 icon: "📊",
                 articles: [
                     {
-                        id: "stock-lab",
-                        title: "Stock Lab",
-                        date: "2026/09/20",
-                        tag: "Data Analysis",
-                        url: "https://github.com/JaiMoLabs",
-                        summary: "From fundamental assumptions to the derivation of Stochastic Differential Equations (SDEs). The complete process of mathematical modeling and quantitative simulation for stock price generation functions."
+                        id: "token-price-pimulation",
+                        title: "Token Price Simulation",
+                        date: "2026/10/10",
+                        tag: "Topics",
+                        url: "https://github.com/jaimoeth/topics/token-price-simulation",
+                        summary: "From fundamental assumptions to the derivation of Stochastic Differential Equations (SDEs). The complete process of mathematical modeling and quantitative simulation for token price generation functions."
                     }
                 ]
             },
             {
-                name: "Python Tutorials",
+                name: "Python",
                 icon: "🐍",
                 articles: [
                     {
-                        id: "python-basics-chinese",
-                        title: "Python Basics - Chinese",
-                        date: "2026/09/29",
-                        tag: "Python Tutorials",
-                        url: "https://chatgpt.com/",
-                        summary: "These open-source study notes are compiled based on MIT 6.0001, Introduction to Computer Science and Programming in Python, taught by Dr. Ana Bell, Prof. Eric Guttag. This note is shared under the CC-BY-NC-SA license."
+                        id: "basics-chinese",
+                        title: "Basics - English",
+                        date: "2026/10/12",
+                        tag: "Python",
+                        url: "https://github.com/jaimoeth/python/basics-english",
+                        summary: "These open-source study notes are compiled based on MIT 6.0001, Introduction to Computer Science and Programming in Python, taught by Dr. Ana Bell, Prof. Eric Grimson, and Prof. John Guttag.This note is shared under the CC-BY-NC-SA license."
+                    },
+                    {
+                        id: "basics-chinese",
+                        title: "Basics - Chinese",
+                        date: "2026/10/11",
+                        tag: "Python",
+                        url: "https://github.com/jaimoeth/python/basics-chinese",
+                        summary: "这份开源学习笔记基于 Ana Bell 博士、Eric Grimson 教授和 John Guttag 教授讲授的 MIT 6.0001 课程——“计算机科学与 Python 编程导论”——整理而成。本笔记采用 CC-BY-NC-SA 许可协议进行分享。"
                     }
                 ]
             },
             {
-                name: "Open-source Research",
+                name: "Products",
                 icon: "🔬",
                 articles: [
                     {
-                        id: "apeworx-lab",
-                        title: "ApeWorX Lab",
-                        date: "2026/09/28",
-                        tag: "Open-source Research",
-                        url: "https://chatgpt.com/",
-                        summary: "ApeWorX local mainnet fork testing environment for interacting with high-performance DeFi protocols and integration testing."
-                    },
-                    {
-                        id: "ip-website",
-                        title: "IP Website",
-                        date: "2026/09/22",
-                        tag: "Open-source Research",
-                        url: "https://chatgpt.com/",
+                        id: "blog-website",
+                        title: "Blog Website",
+                        date: "2026/10/03",
+                        tag: "Products",
+                        url: "https://github.com/JaiMoLabs/blog-web",
                         summary: "An open-source template for Web3 static blogs and personal knowledge bases, showcasing decentralized web practices that combine IPFS hosting with ENS domain binding."
                     }
                 ]
@@ -90,13 +89,13 @@ window.SITE_CONFIG = {
             {
                 title: "Topics",
                 links: [
-                    { name: "Stay Tuned", url: "#" }
+                    { name: "Token Price Simulation", url: "https://github.com/jaimoeth/topics/token-price-simulation" }
                 ]
             },
             {
                 title: "Products",
                 links: [
-                    { name: "Stay Tuned", url: "#" }
+                    { name: "Blog Website", url: "https://github.com/JaiMoLabs/blog-web" }
                 ]
             },
             {
@@ -108,7 +107,8 @@ window.SITE_CONFIG = {
             {
                 title: "Python",
                 links: [
-                    { name: "Stay Tuned", url: "#" }
+                    { name: "Basics - English", url: "https://github.com/jaimoeth/python/basics-english" },
+                    { name: "Basics - Chinese", url: "https://github.com/jaimoeth/python/basics-chinese" }
                 ]
             }
         ]
