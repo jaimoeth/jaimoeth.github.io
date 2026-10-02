@@ -1,167 +1,138 @@
-
-// 本文件是IP Website页面的整体配置，可根据个人喜好进行修改调整；
-// This file contains the overall configuration for the IP website page and can be modified or adjusted according to personal preference;
+// ==========================================
+// 1. 官网数据配置文件 (config.js)
+// ==========================================
 
 window.SITE_CONFIG = {
 
-  // 若想要修改下方文本，请直接在本页面内完成即可；
-  // 若想要修改变量定义名称，请结合index.html文件内容进行修改；
-  // To modify the text below, please edit it directly on this page;
-  // To modify variable names, please make the changes in conjunction with the contents of index.html;
+    siteName: "JaiMo Blogs",
+    logoImg: "picture/avatar.png",
+    headerSlogan: "Build from first principles.",
+    walletAddress: "jaimo.eth", // 点击 Support 时复制的地址
 
-  profile: {
-    name: "JaiMo",
-    title: "JaiMo Homepage",
-    avatar: "avatar.png",
-    banner: "background.jpg",
-    bio: "Building from first principles. Exploring quantitative systems.",
-    version: "Version 1.1.2"
-    
-  },
+    // 顶部下拉目录
+    topicsMenu: [
+        { name: "关于我 (About)", link: "#about-section" },
+        { name: "精选文章 (Articles)", link: "#articles-section" },
+        { name: "联系与支持 (Contact)", link: "#contact-section" }
+    ],
 
-  titles: {
-    leftColumn: "🪴 Database",
-    centerColumn: "🪵 Latest Articles",
-    rightColumn: "📫 Connection"
-  },
-  
-  leftColumn: [
-
-    // items:[]内部项目可以自由增删，注意格式统一即可；
-    // 不要忘记中间行末尾的逗号；
-    // Items within the `items:[]` array can be added or removed freely; just ensure the formatting remains consistent;
-    // Do not forget the commas at the end of intermediate lines;
-
-    { category: "📊 Data Analysis",
-      items: [
-        { name: "Stock Lab", url: "https://github.com/jaimoeth/stock-lab/tree/main/SPSMath.ipynb" }
-      ]
-    },
-    { category: "🐍 Python Tutorials",
-      items: [
-        { name: "Python Basics - Chinese", url: "https://github.com/jaimoeth/python-tutorials/tree/main/01_python_basics.ipynb" }
-      ]
-    },
-    { category: "🔬 Open-source Research",
-      items: [
-        { name: "IP Website", url: "https://github.com/JaiMoLabs/ip-web" },
-        { name: "ApeWorX Lab", url: "https://github.com/JaiMoLabs/ApeWorX-lab" }
-      ]
-    }
-  ],
-
-  centerColumn: [
-
-    // {}内部项目可以自由增删，注意格式统一即可；
-    // 不要忘记中间行末尾的逗号；
-    // Items within {} can be added or removed freely; just ensure the formatting is consistent;
-    // Do not forget the commas at the end of intermediate lines;
-
-    { tag: "Open-source Research",
-      title: "ApeWorX Lab",
-      url: "https://github.com/JaiMoLabs/ApeWorX-lab",
-      date: "2026/09/28",
-      desc: "ApeWorX local mainnet fork testing environment for interacting with real DeFi protocols and integration testing."
-    },
-    { tag: "Open-source Research",
-      title: "IP Website",
-      url: "https://github.com/JaiMoLabs/ip-web",
-      date: "2026/09/22",
-      desc: "An open-source template for Web3 static blogs and personal knowledge bases, showcasing decentralized web practices that combine IPFS hosting with ENS domain binding."
-    },
-    { tag: "Data Analysis",
-      title: "Stock Lab",
-      url: "https://github.com/jaimoeth/stock-lab/tree/main/SPSMath.ipynb",
-      date: "2026/09/20",
-      desc: "From fundamental assumptions to the derivation of Stochastic Differential Equations (SDEs): The complete process of mathematical modeling and quantitative simulation for stock price generation functions."
-    },
-    { tag: "Python Tutorials",
-      title: "Python Basics - Chinese",
-      url: "https://github.com/jaimoeth/python-tutorials/tree/main/01_python_basics.ipynb",
-      date: "2026/09/29",
-      desc: "These open-source study notes are compiled based on MIT 6.0001, Introduction to Computer Science and Programming in Python, taught by Dr. Ana Bell, Prof. Eric Grimson, and Prof. John Guttag.This note is shared under the CC-BY-NC-SA license."
-    }
-  ],
-  
-  centerColumnFooter: "Showing 5 latest updates. Explore all topics in the <strong>{leftColumnTitle}</strong> on the left.",
-
-  rightColumn: [
-
-    // {}内部项目可以自由增删，注意格式统一即可；
-    // badge栏目是图片公共链接，若想进行替换，可以替换为本地图片("picture1.jpg")，或咨询AI获取需要的官方图标链接；
-    // 不要忘记中间项目末尾的逗号；
-    // Items within the {} braces can be added or removed as desired; just ensure the formatting remains consistent;
-    // The "badge" field contains public image links; you can replace them with local images (e.g., "picture1.jpg") or ask the AI ​​for the required official icon links;
-    // Don't forget the commas at the end of the intermediate items;
-
-    { name: "BlueSky",
-      id: "JaiMo (@jaimo.eth.limo)",
-      url: "https://bsky.app/profile/jaimo.eth.limo",
-      badge: "https://img.shields.io/badge/-0085ff?style=flat-square&logo=bluesky&logoColor=white",
-      alt: "Bluesky Icon"
-    },
-    { name: "X (Twitter)",
-      id: "JaiMo (@jaimoeth)",
-      url: "https://x.com/jaimoeth",
-      badge: "https://img.shields.io/badge/-000000?style=flat-square&logo=x&logoColor=white",
-      alt: "X Icon"
-    },
-    { name: "GitHub",
-      id: "JaiMo ( jaimoeth)",
-      url: "https://github.com/jaimoeth",
-      badge: "https://img.shields.io/badge/-181717?style=flat-square&logo=github&logoColor=white",
-      alt: "GitHub Icon"
-    },
-    { name: "JaiMoLabs",
-      id: "GitHub Organization",
-      url: "https://github.com/JaiMoLabs",
-      badge: "avatar.png",
-      alt: "GitHub Icon"
-    },
-    { name: "Gmail",
-      id: "Direct Contact",
-      url: "mailto:jaimoeth@gmail.com",
-      badge: "https://img.shields.io/badge/-EA4335?style=flat-square&logo=gmail&logoColor=white",
-      alt: "Gmail Icon"
-    }
-  ],
-
-  footer: {
-    title: "⚠️ Important Notices & Official Verification Channels",
-    
-    // 可选：如果文本中需要复用变量（如 {ens}、{verifyUrl}），可以在这里定义；
-    // 如果不需要，可以删掉整个 vars 对象，或者自由扩展其他自定义变量；
-    // 不要忘记中间行末尾的逗号；
-    // Optional: Define variables here if they need to be reused in the text (e.g., {ens}, {verifyUrl});
-    // If not needed, you can remove the entire `vars` object or add other custom variables;
-    // Don't forget the commas at the end of the intermediate lines;
-
-    vars: {
-      ens: "jaimo.eth",
-      verifyUrl: "https://jaimo.eth.xyz"
+    // 全宽 Hero 头图区域new
+    hero: {
+        backgroundImage: "picture/background.png",
+        title: "JaiMo Blogs",
+        subtitle: "Build from first principles."
     },
 
-    items: [
+    // 左侧 Database 目录树与文章源数据new
+    // 所有的文章在这里维护，右侧会自动取前 5 篇显示最新，左侧会完整展示全部
+    database: {
+        title: "Database",
+        categories: [
+            {
+                name: "Data Analysis",
+                icon: "📊",
+                articles: [
+                    {
+                        id: "stock-lab",
+                        title: "Stock Lab",
+                        date: "2026/09/20",
+                        tag: "Data Analysis",
+                        url: "https://github.com/JaiMoLabs",
+                        summary: "From fundamental assumptions to the derivation of Stochastic Differential Equations (SDEs). The complete process of mathematical modeling and quantitative simulation for stock price generation functions."
+                    }
+                ]
+            },
+            {
+                name: "Python Tutorials",
+                icon: "🐍",
+                articles: [
+                    {
+                        id: "python-basics-chinese",
+                        title: "Python Basics - Chinese",
+                        date: "2026/09/29",
+                        tag: "Python Tutorials",
+                        url: "https://chatgpt.com/",
+                        summary: "These open-source study notes are compiled based on MIT 6.0001, Introduction to Computer Science and Programming in Python, taught by Dr. Ana Bell, Prof. Eric Guttag. This note is shared under the CC-BY-NC-SA license."
+                    }
+                ]
+            },
+            {
+                name: "Open-source Research",
+                icon: "🔬",
+                articles: [
+                    {
+                        id: "apeworx-lab",
+                        title: "ApeWorX Lab",
+                        date: "2026/09/28",
+                        tag: "Open-source Research",
+                        url: "https://chatgpt.com/",
+                        summary: "ApeWorX local mainnet fork testing environment for interacting with high-performance DeFi protocols and integration testing."
+                    },
+                    {
+                        id: "ip-website",
+                        title: "IP Website",
+                        date: "2026/09/22",
+                        tag: "Open-source Research",
+                        url: "https://chatgpt.com/",
+                        summary: "An open-source template for Web3 static blogs and personal knowledge bases, showcasing decentralized web practices that combine IPFS hosting with ENS domain binding."
+                    }
+                ]
+            }
+        ]
+    },
 
-      // {}内部项目可以自由增删，注意格式统一即可；
-      // 不要忘记中间项目末尾的逗号；
-      // Items within {} can be added or removed freely; just ensure the formatting is consistent;
-      // Do not forget the comma at the end of intermediate items;
 
-      { type: "html",
-        value: "<strong>防伪声明</strong>：请认准本 ENS 域名 <code>{ens}</code> 绑定的官方联系渠道。所有涉及资金、项目合作与私信通知，均以 <a href=\"{verifyUrl}\" target=\"_blank\">{verifyUrl}</a>（ENS 解析验证页面）公示的信息为准。"
-      },
-      { type: "html",
-        value: "<strong>Anti-Fraud Statement</strong>: Please verify all official contact channels bound to the ENS domain <code>{ens}</code>. All matters regarding funds, project collaborations, and direct messages are subject to the information published on <a href=\"{verifyUrl}\" target=\"_blank\">{verifyUrl}</a> (ENS Resolution Page)."
-      },
-      { type: "text",
-        prefix: "Origin of jaimo",
-        value: "Coined directly from the precise pronunciation (jai-mo) of \"Jianmu\" (建木)—the cosmic world tree in Chinese mythology—serving as a unified digital identity across all platforms."
-      },
-      { type: "text",
-        prefix: "Support Us",
-        value: "ETH for jaimo.eth | Ethereum Mainnet"
-      }
+    // 底部底页配置（完全可配）
+    footerConfig: {
+        copyright: "@2026 JaiMo Labs. All rights reserved.",
+        tagline: "Decentralized & Autonomous",
+        columns: [
+            {
+                title: "Topics",
+                links: [
+                    { name: "Stay Tuned", url: "#" }
+                ]
+            },
+            {
+                title: "Products",
+                links: [
+                    { name: "Stay Tuned", url: "#" }
+                ]
+            },
+            {
+                title: "Career",
+                links: [
+                    { name: "Stay Tuned", url: "#" }
+                ]
+            },
+            {
+                title: "Python",
+                links: [
+                    { name: "Stay Tuned", url: "#" }
+                ]
+            }
+        ]
+    },
+
+    // 社交媒体统一配置（升级为支持图标）
+    socialLinks: [
+        {
+            name: "X (Twitter)",
+            url: "https://x.com/jaimoeth",
+            // X (Twitter) 官方 SVG 路径
+            svg: '<path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>'
+        },
+        {
+            name: "Bluesky",
+            url: "https://bsky.app/profile/jaimo.eth.limo",
+            // Bluesky 官方 SVG 路径
+            svg: '<path fill="currentColor" d="M12 10.8c-1.087-2.114-4.046-6.052-7.983-8.73-2.16-1.464-3.517-1.144-4.017-.924-.656.292-.767 1.218-.767 1.838 0 1.077.585 7.18 1.133 8.356 1.049 2.27 3.447 3.013 5.568 3.272-1.77.302-3.414 1.144-3.414 3.125 0 2.215 1.93 3.033 4.295 3.033 4.706 0 6.185-3.327 6.185-5.96 0-.27-.015-.54-.035-.81.02.27.035.54.035.81 0 2.633 1.479 5.96 6.185 5.96 2.365 0 4.295-.818 4.295-3.033 0-1.981-1.644-2.823-3.414-3.125 2.121-.259 4.519-1.002 5.568-3.272.548-1.176 1.133-7.279 1.133-8.356 0-.62-.111-1.546-.767-1.838-.5-.22-1.857-.54-4.017.924-3.937 2.678-6.896 6.616-7.983 8.73z"/>'
+        },
+        {
+            name: "GitHub",
+            url: "https://github.com/JaiMoLabs",
+            // GitHub 官方 SVG 路径
+            svg: '<path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>'
+        }
     ]
-  }
 };
