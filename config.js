@@ -16,6 +16,7 @@ window.SITE_CONFIG = {
     banner: "background.jpg",
     bio: "Building from first principles. Exploring quantitative systems.",
     version: "Version 1.1.2"
+    
   },
 
   titles: {
